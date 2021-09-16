@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+	<AddIn Type="Application">
+		<Name>Utilities</Name>
+		<FullClassName>MNC5D_Solutions.UI_Utility</FullClassName>
+		<Text>Utility Tools</Text>
+		<Description>Some useful utilities</Description>
+		<VisibilityMode>AlwaysVisible</VisibilityMode>
+		<Assembly>02_RevitUtilities.dll</Assembly>
+		<AddInId>163ace6b-763a-4123-9f08-a5a085aa2612</AddInId>
+		<VendorId>5DV</VendorId>
+		<VendorDescription>Sourav Ganguli</VendorDescription>
+	</AddIn>
+</RevitAddIns>
