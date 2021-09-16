@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="_03_Utilities._01_Resources_Utilities_._03_Settings" GeneratedClassName="ParameterTransfer">
+  <Profiles />
+  <Settings>
+    <Setting Name="ParameterToCopyFrom" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ParameterToCopyTo" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ParameterType" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Yes</Value>
+    </Setting>
+    <Setting Name="Groups" Type="System.String" Scope="User">
+      <Value Profile="(Default)">No</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
