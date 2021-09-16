@@ -129,5 +129,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\00_RevitLibary\00_RevitLibary.csproj">
+      <Project>{205ec604-4299-48ed-a686-97913c5633fa}</Project>
+      <Name>00_RevitLibary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
