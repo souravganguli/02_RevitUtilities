@@ -41,10 +41,13 @@ namespace Utilities
                     {
                             if (_02_RevitUtilities._01_Resources_Utilities_._03_Settings.JoinGeometry.Default.JoinOrder)
                             {
+                                
                                 JoinGeometryUtils.JoinGeometry(ActiveDoc, EI, E);
+                                JoinGeometryUtils.SwitchJoinOrder(ActiveDoc, EI, E);
                             }
                             else
                             {
+                                
                                 JoinGeometryUtils.JoinGeometry(ActiveDoc, E, EI);
                             }
                                                 
@@ -83,6 +86,9 @@ namespace Utilities
 
 
             _02_RevitUtilities._01_Resources_Utilities_._03_Settings.JoinGeometry.Default.Save();
+
+
+            
 
             return Result.Succeeded;
         }
