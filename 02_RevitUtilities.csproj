@@ -111,6 +111,9 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>ParameterTransfer.Designer.cs</LastGenOutput>
     </None>
+    <None Include="01_Resources%28Utilities%29\05_HelpFiles\5DVProductivityTools.chm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="02_RevitUtilities.addin">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -138,5 +141,6 @@
       <Name>00_RevitLibary</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

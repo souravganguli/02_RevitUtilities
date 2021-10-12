@@ -94,10 +94,10 @@ namespace Utilities
                     try
                     {
 
-                        Parameter ParameterToGet = E.LookupParameter("Volume");
+                        Parameter ParameterToGet = E.LookupParameter("Area");
                         double ParameterValue = ParameterToGet.AsDouble();
 
-                        Parameter ParameterToBeSet = E.LookupParameter("IfcVolume");
+                        Parameter ParameterToBeSet = E.LookupParameter("IfcArea");
                         ParameterToBeSet.Set(ParameterValue);
                     }
                     catch (Exception)
@@ -123,6 +123,24 @@ namespace Utilities
                     {
                       
                     }
+                    ///IfcArea
+                    try
+                    {
+
+                        Parameter ParameterToGet = E.LookupParameter("Volume");
+                        double ParameterValue = ParameterToGet.AsDouble();
+
+                        Parameter ParameterToBeSet = E.LookupParameter("IfcVolume");
+                        ParameterToBeSet.Set(ParameterValue);
+                    }
+                    catch (Exception)
+                    {
+
+
+                    }
+
+
+
                     ////PipeLength
                     try
                     {
