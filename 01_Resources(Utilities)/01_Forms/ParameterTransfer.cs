@@ -34,7 +34,8 @@ namespace UtilityForms
             _02_RevitUtilities._01_Resources_Utilities_._03_Settings.ParameterTransfer.Default.Groups = GroupElement.Text;
             _02_RevitUtilities._01_Resources_Utilities_._03_Settings.ParameterTransfer.Default.ParameterType = ParameterType.Text;
             _02_RevitUtilities._01_Resources_Utilities_._03_Settings.ParameterTransfer.Default.Save();
-            Form.ActiveForm.Close();
+            this.DialogResult = DialogResult.OK;
+            this.Close();
 
         }
 

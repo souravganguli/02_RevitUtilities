@@ -119,10 +119,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="01_Resources%28Utilities%29\02_Images\Add.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="01_Resources%28Utilities%29\02_Images\copy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="01_Resources%28Utilities%29\02_Images\I.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="01_Resources%28Utilities%29\02_Images\J.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="01_Resources%28Utilities%29\02_Images\join.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="01_Resources%28Utilities%29\02_Images\settings.png">

@@ -19,7 +19,16 @@ namespace Utilities
             {
           
                 UtilityForms.ParameterTransfer PT = new UtilityForms.ParameterTransfer();
-                PT.ShowDialog();
+                PT.ShowDialog();            
+
+                       
+
+            if (PT.DialogResult == System.Windows.Forms.DialogResult.Cancel)
+            {
+                
+                return Result.Cancelled;
+            }
+
 
                 #region/////Intro
 
@@ -58,18 +67,28 @@ namespace Utilities
                         foreach (Element E in ElementsToProcess)
                         {                       
                             try
-                            {  
-                                if (ParameterType == "Instance")
+                            {
+                           
+                            if (ParameterType == "Instance")
                                 {
-                                    if (E.GroupId == null || E.GroupId != null && ProcessGroups == "Yes")
-                                    {
-                                        String CopiedValue = RevitLibary.DataTools.GetParameterValueByName(E, ParameterToCopyFrom);
-                                        RevitLibary.DataTools.SetParameterByName(E, ParameterToCopyTo, CopiedValue, ActiveDoc);
+                              
+
+                                if (E.GroupId.IntegerValue == -1 || E.GroupId.IntegerValue != -1 && ProcessGroups == "Yes")
+                                    {                                    
+                                    String CopiedValue = RevitLibary.DataTools.GetParameterValueByName(E, ParameterToCopyFrom);
+                                                                                  
+
+
+                                    RevitLibary.DataTools.SetParameterByName(E, ParameterToCopyTo, CopiedValue, ActiveDoc);                                    
                                     }
+
+
+
                                 }
                                 if (ParameterType == "Type")
                                 {
-                                    ElementType ET = ActiveDoc.GetElement(E.GetTypeId()) as ElementType;
+                               
+                                ElementType ET = ActiveDoc.GetElement(E.GetTypeId()) as ElementType;
 
                                          String CopiedValue = RevitLibary.DataTools.GetParameterValueByName(ET, ParameterToCopyFrom);
                                         RevitLibary.DataTools.SetParameterByName(ET, ParameterToCopyTo, CopiedValue, ActiveDoc);
@@ -80,6 +99,8 @@ namespace Utilities
                             {
 
 
+                           
+
                             }
 
                         }
@@ -87,12 +108,12 @@ namespace Utilities
                     }
 
 
-                    TaskDialog.Show("Parameter Transferer", "Parameter Transfered");
+                    TaskDialog.Show("Parameter Transferer", "Parameters transferred");
                     return Result.Succeeded;
                 }
 
 
-                return Result.Succeeded;
+                return Result.Failed;
             }
 
         }

@@ -29,34 +29,48 @@ namespace Utilities
                 foreach (ElementId item in IL)
             {
                 Element E = ActiveDoc.GetElement(item);
-                IList<Element> IntersectingElements = RevitLibary.GeometeryTools.SuperGetElementBoundingBox(E, commandData);
 
-                    
-
-
-                foreach (Element EI in IntersectingElements)
-                {
+                    IList<Element> IntersectingElements;
 
                     try
                     {
-                            if (_02_RevitUtilities._01_Resources_Utilities_._03_Settings.JoinGeometry.Default.JoinOrder)
-                            {
-                                
-                                JoinGeometryUtils.JoinGeometry(ActiveDoc, EI, E);
-                                JoinGeometryUtils.SwitchJoinOrder(ActiveDoc, EI, E);
-                            }
-                            else
-                            {
-                                
-                                JoinGeometryUtils.JoinGeometry(ActiveDoc, E, EI);
-                            }
-                                                
+
+                   
+                     IntersectingElements = RevitLibary.GeometeryTools.SuperGetElementBoundingBox(E, commandData);
+
                     }
                     catch (Exception)
                     {
-                           
-                    }                    
-                }
+
+                        IntersectingElements = null;
+                    }
+
+                    if (IntersectingElements != null)
+                    {
+                        foreach (Element EI in IntersectingElements)
+                        {
+
+                            try
+                            {
+                                if (_02_RevitUtilities._01_Resources_Utilities_._03_Settings.JoinGeometry.Default.JoinOrder)
+                                {
+
+                                    JoinGeometryUtils.JoinGeometry(ActiveDoc, EI, E);
+                                    JoinGeometryUtils.SwitchJoinOrder(ActiveDoc, EI, E);
+                                }
+                                else
+                                {
+
+                                    JoinGeometryUtils.JoinGeometry(ActiveDoc, E, EI);
+                                }
+
+                            }
+                            catch (Exception)
+                            {
+
+                            }
+                        }
+                    }
             }
 
                 TT.Commit();

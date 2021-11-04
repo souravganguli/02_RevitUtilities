@@ -27,18 +27,18 @@ namespace MNC5D_Solutions
             catch (Exception)
             {
             }
-         
- 
+       
+
             /// 03_Utilities
             {
                 var DllPath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "02_RevitUtilities.dll");
-                String HelpFilePath = @"01_Resources(Formwork)\05_HelpFiles\5DVProductivityTools.chm";
+                String HelpFilePath = @"01_Resources(Utilities)\05_HelpFiles\5DVProductivityTools.chm";
 
                 RibbonPanel PannelName = application.CreateRibbonPanel(Tabname,"Utility");          
 
-                RevitLibary.UI.AddButton("AddParamters", Assembly.GetExecutingAssembly().Location, "Utilities.ParameterExtract", PannelName, "01_Resources(Utilities)\\02_Images\\I.png", HelpFilePath);               
-                RevitLibary.UI.AddButton("JoinGeometry", Assembly.GetExecutingAssembly().Location, "Utilities.Join", PannelName, "01_Resources(Utilities)\\02_Images\\J.png", HelpFilePath);
-                RevitLibary.UI.AddButton("Transfer Parameters", Assembly.GetExecutingAssembly().Location, "Utilities.PT", PannelName, "01_Resources(Utilities)\\02_Images\\T.png", HelpFilePath);
+                RevitLibary.UI.AddButton("Add Parameters", Assembly.GetExecutingAssembly().Location, "Utilities.ParameterExtract", PannelName, "01_Resources(Utilities)\\02_Images\\Add.png", HelpFilePath);               
+                RevitLibary.UI.AddButton("JoinGeometry", Assembly.GetExecutingAssembly().Location, "Utilities.Join", PannelName, "01_Resources(Utilities)\\02_Images\\join.png", HelpFilePath);
+                RevitLibary.UI.AddButton("Transfer Parameters", Assembly.GetExecutingAssembly().Location, "Utilities.PT", PannelName, "01_Resources(Utilities)\\02_Images\\copy.png", HelpFilePath);
 
                 PannelName.AddSlideOut();
                 RevitLibary.UI.AddButton("Switch Join", Assembly.GetExecutingAssembly().Location, "Utilities.SwitchJoin", PannelName, "01_Resources(Utilities)\\02_Images\\switch.png", HelpFilePath);
